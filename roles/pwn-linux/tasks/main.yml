@@ -16,6 +16,7 @@
     - https://github.com/rebootuser/LinEnum
     - https://github.com/OJ/gobuster
     - https://github.com/huntergregal/mimipenguin
+    - https://github.com/f0rb1dd3n/Reptile
   become: yes
 
 - name: Downloading precompiled Packages
