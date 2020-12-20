@@ -8,10 +8,10 @@
     group: "{{ lookup('env','USER') }}"
     mode: '744'
     recurse: yes
-
   loop:
     - "{{ re_dir }}"
     - "{{ c2_dir }}"
     - "{{ pwn_win_dir }}"
     - "{{ pwn_lin_dir }}"
+    - "{{ lin_pkg_dir }}"
   become: yes
