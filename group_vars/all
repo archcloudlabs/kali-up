@@ -2,4 +2,5 @@ c2_dir: /opt/c2/
 re_dir: /opt/RE/
 pwn_win_dir: /opt/win_pwn/
 pwn_lin_dir: /opt/lin_pwn/
+lin_pkg_dir: /opt/devtools/
 user_dir: root
