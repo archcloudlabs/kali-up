@@ -1,0 +1,19 @@
+---
+- name: Creating Linx Dev directory in "{{ lin_pkg_dir }}"
+  file:
+    path: "{{ lin_pkg_dir }}"
+    state: directory
+    owner: "{{ user_dir }}"
+    mode: '0755'
+  become: yes
+
+- name: Downloading Additional Dev Packages 
+  get_url:
+    url: "{{ item }}"
+    dest: "{{ lin_pkg_dir }}"
+    mode: 644
+    owner: "{{ user_dir }}"
+  loop:
+    - https://download.jetbrains.com/toolbox/jetbrains-toolbox-1.19.7784.tar.gz
+    - https://www.eclipse.org/downloads/download.php?file=/oomph/epp/2020-12/R/eclipse-inst-jre-linux64.tar.gz
+  become: yes
